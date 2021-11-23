@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AdvancedSkills from "./Components/Explore/AdvancedSkills";
+import Basic from "./Components/Explore/Basic";
+import Communication from "./Components/Explore/Communication";
+import GetStarted from "./Components/Explore/GetStarted";
+import Growth from "./Components/Learn/Growth";
+import MiniRightNavbar from "./Components/Navbar/MiniRightNavbar";
+import RightNavbar from "./Components/Navbar/RightNavbar";
+import "./Styles/Styles.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="d-flex background">
+        <div>
+          <MiniRightNavbar />
+          <RightNavbar />
+        </div>
+        <div className="col">
+          <Routes>
+            <Route path="/" element={<Basic />} />
+          </Routes>
+          <Routes>
+            <Route path="/" element={<GetStarted />} />
+          </Routes>
+          <Routes>
+            <Route path="/" element={<Communication />} />
+          </Routes>
+          <Routes>
+            <Route path="/" element={<AdvancedSkills />} />
+          </Routes>
+        </div>
+        <Routes>
+          <Route path="/growth" element={<Growth />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

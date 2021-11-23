@@ -1,0 +1,165 @@
+@import "Variables";
+@import "EndPoints";
+
+* {
+  font-family: $fira-code-font;
+}
+.body {
+  background-color: $bg-dark;
+}
+
+.background {
+  background-color: $bg-dark;
+}
+
+.navbar {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.navbar-mini {
+  width: 40px;
+  height: 100vh;
+  background-color: $bg-dark;
+}
+.navbar-bg {
+  background-color: $bg-dark;
+}
+
+.navbar-scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.navbar-transition-collapse {
+  transform: translateX(-500px);
+  transition: all 700ms;
+}
+
+.navbar-transition {
+  transform: translateX(0);
+  transition: all 700ms;
+}
+
+.img-style {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.img-style-mini {
+  @include sm {
+    width: 80px;
+  }
+  @include md {
+    width: 120px;
+  }
+  width: 160px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.text-dim {
+  color: $text-low-gray;
+  font-size: 10px;
+}
+
+.btn-style {
+  color: $text-white;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btn-bg-active {
+  background-color: $bg-active;
+}
+
+.btn-bg-active-icon {
+  color: $btn-active;
+}
+
+.icon-hover {
+  color: $text-low-gray;
+  font-size: 18px;
+}
+
+.icon-hover:hover {
+  color: $btn-active;
+}
+
+.link-style {
+  color: $btn-active;
+  text-decoration: none;
+}
+
+.link-style:hover {
+  color: $btn-active;
+  text-decoration: none;
+}
+
+.text-color {
+  color: $text-white;
+}
+
+.btn-bg {
+  background-color: $bg-active;
+}
+
+.btn-bg:hover {
+  background-color: $btn-active;
+  color: $text-white;
+}
+
+.ref-style {
+  color: rgba(96, 165, 250, 1);
+  text-decoration: none;
+}
+
+.btn-link-style {
+  text-decoration: none;
+}
+
+.btn-link-style:hover {
+  text-decoration: none;
+  color: $text-white;
+}
+
+.process {
+  position: absolute;
+  font-size: 25px;
+  left: 26px;
+}
+
+.process::after {
+  content: "";
+  width: 2px;
+  height: 300px;
+  background-color: $text-low-gray;
+  position: absolute;
+  top: 30px;
+  right: 12px;
+  z-index: 10;
+}
+
+.process-end {
+  position: relative;
+  left: -22px;
+  font-size: 25px;
+  background-color: $bg-dark;
+  color: gray;
+  width: 100%;
+}
+
+.icon-z {
+  z-index: 99;
+  background-color: $bg-dark;
+}
+
+.conditional-padding {
+  padding: 2em;
+  @include md {
+    padding: 5px;
+  }
+}
