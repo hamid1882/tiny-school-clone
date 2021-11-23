@@ -1,6 +1,9 @@
 {
   "name": "tiny-school-clone",
   "version": "0.1.0",
+  "engines": {
+    "node": "14.x"
+  },
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.2",
