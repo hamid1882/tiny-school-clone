@@ -19,23 +19,25 @@ const Growth = () => {
             {item.stages.map((data) => {
               return (
                 <div className="p-3 my-5 rounded btn-bg-active text-color position-relative">
-                  <i class="process far fa-question-circle icon-z"></i>
+                  <i class="process far fa-question-circle"></i>
                   <h3>{data.heading}</h3>
                   <div className="mx-2">{data.sub_heading}</div>
                   {data.steps.map((ref) => {
                     return (
                       <ol className="overflow-hidden my-3">
-                        <li className="d-flex gap-2 align-items-center p-1 m-1">
+                        <li className="d-md-flex gap-2 align-items-center p-1 m-1">
                           <span>{ref.index}.</span>
                           <span>{ref.name}</span>
-                          <a
-                            href={ref.url}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="ref-style"
-                          >
-                            ({ref.website})
-                          </a>
+                          <div className="py-1">
+                            <a
+                              href={ref.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="ref-style"
+                            >
+                              ({ref.website})
+                            </a>
+                          </div>
                         </li>
                       </ol>
                     );

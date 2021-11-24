@@ -141,6 +141,7 @@
   left: -20px;
   height: calc(100% + 1em);
   top: 20px;
+  background-color: transparent;
 }
 
 .process::after {
@@ -160,10 +161,6 @@
   background-color: $bg-dark;
   color: gray;
   width: 100%;
-}
-
-.icon-z {
-  background-color: $bg-dark;
 }
 
 .conditional-padding {
