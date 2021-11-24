@@ -22,11 +22,10 @@ const Growth = () => {
                   <i class="process far fa-question-circle"></i>
                   <h3>{data.heading}</h3>
                   <div className="mx-2">{data.sub_heading}</div>
-                  {data.steps.map((ref) => {
-                    return (
-                      <ol className="overflow-hidden my-3">
+                  <ol className="overflow-hidden my-3">
+                    {data.steps.map((ref) => {
+                      return (
                         <li className="d-md-flex gap-2 align-items-center p-1 m-1">
-                          <span>{ref.index}.</span>
                           <span>{ref.name}</span>
                           <div className="py-1">
                             <a
@@ -39,9 +38,9 @@ const Growth = () => {
                             </a>
                           </div>
                         </li>
-                      </ol>
-                    );
-                  })}
+                      );
+                    })}
+                  </ol>
                 </div>
               );
             })}
