@@ -12,7 +12,7 @@ function RightNavbar() {
 
   return (
     <div className="navbar px-3 d-none d-md-block sticky-top">
-      <Link to="/">
+      <Link to="/" onClick={() => handleCurrentSection(1)}>
         <img
           className="img-style"
           src="https://tiny.school/tinyschool-logo-with-text.svg"
@@ -84,8 +84,8 @@ function RightNavbar() {
           <div className="fs-6 bg-transparent">Advanced Skills</div>
         </Link>
 
-         {/* 5 */}
-         <Link
+        {/* 5 */}
+        <Link
           to="/skills"
           onClick={() => handleCurrentSection(5)}
           className={`btn-link-style btn-style d-flex gap-2 w-100 p-2 align-items-center ${

@@ -12,7 +12,7 @@ export const Learn = [
         steps: [
           {
             index: 1,
-            name: "Fist thing",
+            name: "First thing",
             url: "http://www.google.com",
             website: "www.google.com",
           },
@@ -37,7 +37,7 @@ export const Learn = [
         steps: [
           {
             index: 1,
-            name: "Fist thing",
+            name: "First thing",
             url: "http://www.google.com",
             website: "www.google.com",
           },
@@ -62,7 +62,7 @@ export const Learn = [
         steps: [
           {
             index: 1,
-            name: "Fist thing",
+            name: "First thing",
             url: "http://www.google.com",
             website: "www.google.com",
           },
