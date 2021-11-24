@@ -22,7 +22,7 @@ const MiniRightNavbar = () => {
   };
 
   return (
-    <div className="navbar-mini d-md-none sticky-top navbar-border">
+    <div className="navbar-mini d-md-none sticky-top">
       <button
         className={`btn shadow-none text-white my-3 ${
           selectNav === false ? "d-block" : "d-none"
@@ -32,7 +32,7 @@ const MiniRightNavbar = () => {
         <i className="fa fa-bars icon-hover"></i>
       </button>
       <div
-        className={` navbar-scroll position-absolute navbar-bg px-3 h-100 ${
+        className={` navbar-scroll navbar-border position-absolute navbar-bg px-3 h-100 ${
           selectNav ? "navbar-transition" : "navbar-transition-collapse"
         }`}
       >
