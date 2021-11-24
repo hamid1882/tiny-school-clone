@@ -129,23 +129,25 @@
 .process {
   position: absolute;
   font-size: 25px;
-  left: 26px;
+  left: 0;
+  z-index: 100;
+  height: inherit;
 }
 
 .process::after {
   content: "";
   width: 2px;
-  height: 300px;
+  height: 100%;
   background-color: $text-low-gray;
   position: absolute;
-  top: 30px;
+  top: 25px;
   right: 12px;
   z-index: 10;
 }
 
 .process-end {
   position: relative;
-  left: -22px;
+  left: -20px;
   font-size: 25px;
   background-color: $bg-dark;
   color: gray;
@@ -160,6 +162,6 @@
 .conditional-padding {
   padding: 2em;
   @include md {
-    padding: 5px;
+    padding: 20px;
   }
 }
