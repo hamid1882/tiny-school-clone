@@ -22,7 +22,7 @@ const MiniRightNavbar = () => {
   };
 
   return (
-    <div className="navbar-mini d-md-none sticky-top">
+    <div className="navbar-mini d-md-none sticky-top navbar-border">
       <button
         className={`btn shadow-none text-white my-3 ${
           selectNav === false ? "d-block" : "d-none"
