@@ -19,8 +19,8 @@ const Skills = () => {
                 className="d-grid skills-link col-12 col-md-5 col-lg-3 p-2 btn-bg-active"
               >
                 <p className="my-2">{item.Subject}</p>
-                <div className="col-6 p-1 h-100 rounded border-0 btn-skill text-center">
-                  <span>{item.Level}</span>
+                <div className="col-6 overflow-hidden p-1 h-100 rounded border-0 btn-skill text-center">
+                  <span className="fs-6">{item.Level}</span>
                 </div>
               </Link>
             );

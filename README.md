@@ -1,4 +1,3 @@
-Deploy: https://tiny-school-repo-6omr5qupx-hamid1882.vercel.app
 
 # Getting Started with Create React App
 
