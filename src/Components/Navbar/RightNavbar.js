@@ -83,6 +83,22 @@ function RightNavbar() {
           ></i>
           <div className="fs-6 bg-transparent">Advanced Skills</div>
         </Link>
+
+         {/* 5 */}
+         <Link
+          to="/skills"
+          onClick={() => handleCurrentSection(5)}
+          className={`btn-link-style btn-style d-flex gap-2 w-100 p-2 align-items-center ${
+            selectCurrent === 5 ? "btn-bg-active" : null
+          }`}
+        >
+          <i
+            className={`fa fa-mask ${
+              selectCurrent === 5 ? "btn-bg-active-icon" : "bg-transparent"
+            }`}
+          ></i>
+          <div className="fs-6 bg-transparent">All Skills</div>
+        </Link>
       </div>
     </div>
   );

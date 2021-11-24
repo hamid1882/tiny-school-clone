@@ -1,15 +1,15 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { Skilldata } from "../../Database/Skilldata";
 import { selectCurrentTab } from "../../Redux/AppSlice";
 
 const Basic = () => {
   const selectCurrent = useSelector(selectCurrentTab);
+  const MidlevelData = Skilldata.filter((data) => data.Level === "Mid-level");
 
   return (
-    <div
-      className={`text-color conditional-padding ${selectCurrent === 2 ? "d-block" : "d-none"}`}
-    >
+    <div className={`text-color ${selectCurrent === 2 ? "d-block" : "d-none"}`}>
       <div className="text-center">
         <h1>Explore some basic career skills</h1>
         <Link to="/" className="link-style">
@@ -17,30 +17,16 @@ const Basic = () => {
         </Link>
       </div>
       <div className="my-5">
-        <Link
-          to="/"
-          className="btn btn-bg shadow-none w-100 text-color text-start p-3 border-0 my-2"
-        >
-          Writing Clean Code
-        </Link>
-        <Link
-          to="/"
-          className="btn btn-bg shadow-none w-100 text-color text-start p-3 border-0 my-2"
-        >
-          Software testing basics
-        </Link>
-        <Link
-          to="/"
-          className="btn btn-bg shadow-none w-100 text-color text-start p-3 border-0 my-2"
-        >
-          Time management
-        </Link>
-        <Link
-          to="/"
-          className="btn btn-bg shadow-none w-100 text-color text-start p-3 border-0 my-2"
-        >
-          Career Ladder
-        </Link>
+        {MidlevelData.map((item) => {
+          return (
+            <Link
+              to="/skills/growth"
+              className="btn btn-bg shadow-none w-100 text-color text-start p-3 border-0 my-2"
+            >
+              {item.Subject}
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

@@ -13,8 +13,6 @@ const MiniRightNavbar = () => {
   const selectNav = useSelector(selectNavbarShown);
   const dispatch = useDispatch();
 
-  console.log(selectNav);
-
   const handleCurrentSection = (index) => {
     dispatch(changeTab(index));
   };
@@ -26,7 +24,7 @@ const MiniRightNavbar = () => {
   return (
     <div className="navbar-mini d-md-none sticky-top">
       <button
-        className={`btn shadow-none text-white ${
+        className={`btn shadow-none text-white my-3 ${
           selectNav === false ? "d-block" : "d-none"
         }`}
         onClick={handleToggleNav}
@@ -34,7 +32,7 @@ const MiniRightNavbar = () => {
         <i className="fa fa-bars icon-hover"></i>
       </button>
       <div
-        className={`navbar-scroll position-absolute navbar-bg px-3 h-100 ${
+        className={` navbar-scroll position-absolute navbar-bg px-3 h-100 ${
           selectNav ? "navbar-transition" : "navbar-transition-collapse"
         }`}
       >
@@ -114,6 +112,23 @@ const MiniRightNavbar = () => {
             ></i>
             <div className="fs-6 bg-transparent">Advanced Skills</div>
           </Link>
+
+          {/* 5 */}
+
+          <Link
+          to="/skills"
+          onClick={() => handleCurrentSection(5)}
+          className={`btn-link-style btn-style d-flex gap-2 w-100 p-2 align-items-center ${
+            selectCurrent === 5 ? "btn-bg-active" : null
+          }`}
+        >
+          <i
+            className={`fa fa-mask ${
+              selectCurrent === 5 ? "btn-bg-active-icon" : "bg-transparent"
+            }`}
+          ></i>
+          <div className="fs-6 bg-transparent">All Skills</div>
+        </Link>
         </div>
       </div>
     </div>

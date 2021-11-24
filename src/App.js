@@ -4,6 +4,7 @@ import AdvancedSkills from "./Components/Explore/AdvancedSkills";
 import Basic from "./Components/Explore/Basic";
 import Communication from "./Components/Explore/Communication";
 import GetStarted from "./Components/Explore/GetStarted";
+import Skills from "./Components/Explore/Skills";
 import Growth from "./Components/Learn/Growth";
 import MiniRightNavbar from "./Components/Navbar/MiniRightNavbar";
 import RightNavbar from "./Components/Navbar/RightNavbar";
@@ -17,7 +18,7 @@ function App() {
           <MiniRightNavbar />
           <RightNavbar />
         </div>
-        <div className="col">
+        <div className="col conditional-padding">
           <Routes>
             <Route path="/" element={<Basic />} />
           </Routes>
@@ -30,10 +31,13 @@ function App() {
           <Routes>
             <Route path="/" element={<AdvancedSkills />} />
           </Routes>
+          <Routes>
+            <Route path="/skills" element={<Skills />} />
+          </Routes>
+          <Routes>
+            <Route path="/skills/growth" element={<Growth />} />
+          </Routes>
         </div>
-        <Routes>
-          <Route path="/growth" element={<Growth />} />
-        </Routes>
       </div>
     </Router>
   );

@@ -2,80 +2,58 @@ import React from "react";
 import { Learn } from "../../Database/Learn";
 
 const Growth = () => {
-  const data = Learn;
-  const reference = data.map((item) => item.reference);
-  const subject = data.map((item) => item.subject);
-  const study = data.map((item) => item.study);
-  const studyIntro = study.map((item) => item.intro);
-  const studyLevel = study.map((item) => item.level);
-  const heading = study.map((item) => item.heading);
-  const subHeading = study.map((item) => item.sub_heading);
-  const stage_1 = reference.map((item) => item.stage_1);
-  const stage_2 = reference.map((item) => item.stage_2);
-  const stage_3 = reference.map((item) => item.stage_3);
-
   return (
-    <div className="conditional-padding w-100 position-relative">
-      <div className="p-3 rounded btn-bg-active text-color">
-        <h4>{subject}</h4>
-        <p>{studyIntro}</p>
-        <span>Skill level: </span>
-        <span>{studyLevel}</span>
-        <div>
-          <button className="btn bg-white my-5">Life skills</button>
-        </div>
-      </div>
-      <div className="p-3 my-5 rounded btn-bg-active text-color border">
-        <i class="process far fa-question-circle icon-z"></i>
-        <h3>{heading}</h3>
-        <p>{subHeading}</p>
-        <ol>
-          <li className="d-flex gap-2 align-items-center">
-            <span>1.</span>
-            <span>{stage_1[0].name}</span>
-            <a
-              href={stage_1[0].ref}
-              target="_blank"
-              rel="noreferrer"
-              className="ref-style"
-            >
-              (www.ted.com)
-            </a>
-          </li>
-          <li className="d-flex gap-2 align-items-center my-2">
-            <span>2.</span>
-
-            <span>{stage_2[0].name}</span>
-            <a
-              href={stage_2[0].ref}
-              target="_blank"
-              rel="noreferrer"
-              className="ref-style"
-            >
-              (www.ted.com)
-            </a>
-          </li>
-          <li className="d-flex gap-2 align-items-center ">
-            <span>3.</span>
-            <span>{stage_3[0].name}</span>
-            <div>
-              <a
-                href={stage_3[0].ref}
-                target="_blank"
-                rel="noreferrer"
-                className="ref-style"
-              >
-                (fs.blog)
-              </a>
+    <>
+      {Learn.map((item) => {
+        return (
+          <div className="w-100">
+            <div className="p-3 rounded btn-bg-active text-color">
+              <h4>{item.subject}</h4>
+              <p>{item.intro}</p>
+              <span>Skill level: </span>
+              <span>{item.level}</span>
+              <div>
+                <button className="btn bg-white my-5">Life skills</button>
+              </div>
             </div>
-          </li>
-        </ol>
-      </div>
-      <div className="process-end d-flex align-items-center">
-        <i className="far fa-question-circle text-white icon-z"></i>
-        <div className="mx-3">A better version of yourself awaits you</div>
-      </div>
-    </div>
+            {item.stages.map((data) => {
+              return (
+                <div className="p-3 my-5 rounded btn-bg-active text-color position-relative">
+                  <i class="process far fa-question-circle icon-z"></i>
+                  <h3>{data.heading}</h3>
+                  <div className="mx-2">{data.sub_heading}</div>
+                  {data.steps.map((ref) => {
+                    return (
+                      <ol className="overflow-hidden my-3">
+                        <li className="d-flex gap-2 align-items-center p-1 m-1">
+                          <span>{ref.index}.</span>
+                          <span>{ref.name}</span>
+                          <a
+                            href={ref.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="ref-style"
+                          >
+                            ({ref.website})
+                          </a>
+                        </li>
+                      </ol>
+                    );
+                  })}
+                </div>
+              );
+            })}
+
+            <div className="process-end d-flex align-items-center">
+              <i className="far fa-question-circle text-white icon-z"></i>
+              <div className="mx-3 responsive-text">
+                A better version of yourself awaits you
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </>
   );
 };
 

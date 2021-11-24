@@ -80,6 +80,11 @@
   color: $btn-active;
 }
 
+.btn-bg-text {
+  background-color: $btn-active;
+  color: white;
+}
+
 .icon-hover {
   color: $text-low-gray;
   font-size: 18px;
@@ -129,20 +134,19 @@
 .process {
   position: absolute;
   font-size: 25px;
-  left: 0;
-  z-index: 100;
-  height: inherit;
+  left: -20px;
+  height: calc(100% + 1em);
+  top: 20px;
 }
 
 .process::after {
   content: "";
   width: 2px;
-  height: 100%;
+  height: inherit;
   background-color: $text-low-gray;
   position: absolute;
   top: 25px;
   right: 12px;
-  z-index: 10;
 }
 
 .process-end {
@@ -155,7 +159,6 @@
 }
 
 .icon-z {
-  z-index: 99;
   background-color: $bg-dark;
 }
 
@@ -164,4 +167,39 @@
   @include md {
     padding: 20px;
   }
+}
+
+.responsive-text {
+  font-size: 25px;
+  @include md {
+    font-size: 15px;
+  }
+}
+
+.positioning-nav {
+  position: relative;
+  @include md {
+    position: absolute;
+    background-color: $bg-dark;
+    width: 40%;
+  }
+}
+
+.btn-skill {
+  background-color: $btn-active;
+  color: white;
+}
+
+.btn-skill:hover {
+  color: white;
+}
+
+.skills-link {
+  color: white;
+  text-decoration: none;
+}
+
+.skills-link:hover {
+  color: white;
+  text-decoration: none;
 }
