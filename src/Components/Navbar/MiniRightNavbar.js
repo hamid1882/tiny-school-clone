@@ -26,7 +26,7 @@ const MiniRightNavbar = () => {
       <button
         className={`btn shadow-none text-white my-3  ${
           selectNav === false
-            ? "navbar-transition "
+            ? "navbar-transition"
             : "navbar-transition-collapse"
         }`}
         onClick={handleToggleNav}

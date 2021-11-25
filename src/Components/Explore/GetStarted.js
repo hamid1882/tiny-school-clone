@@ -7,7 +7,7 @@ import { Skilldata } from "../../Database/Skilldata";
 const GetStarted = () => {
   const selectCurrent = useSelector(selectCurrentTab);
 
-  const juniorData = Skilldata.filter(data => data.Level === "Junior");
+  const juniorData = Skilldata.filter((data) => data.Level === "Junior");
 
   return (
     <div className={`text-color ${selectCurrent === 1 ? "d-block" : "d-none"}`}>
@@ -23,7 +23,7 @@ const GetStarted = () => {
         {juniorData.map((item) => {
           return (
             <Link
-              to="/skills/growth"
+              to={`/skills/${item.Subject}`}
               className="btn btn-bg shadow-none w-100 text-color text-start p-3 border-0 my-2"
             >
               {item.Subject}

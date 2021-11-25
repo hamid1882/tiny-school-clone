@@ -23,7 +23,7 @@ const Communication = () => {
         {communicationData.map((item) => {
           return (
             <Link
-              to="/skills/growth"
+              to={`/skills/${item.Subject}`}
               className="btn btn-bg shadow-none w-100 text-color text-start p-3 border-0 my-2"
             >
               {item.Subject}

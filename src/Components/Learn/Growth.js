@@ -1,10 +1,14 @@
 import React from "react";
+import { useParams } from "react-router";
 import { Learn } from "../../Database/Learn";
 
 const Growth = () => {
+  const params = useParams();
+  const filteredData = Learn.filter(item => item.subject === params.id);
+  
   return (
     <>
-      {Learn.map((item) => {
+      {filteredData.map((item) => {
         return (
           <div className="w-100">
             <div className="p-3 rounded btn-bg-active text-color">

@@ -5,7 +5,6 @@ import { Skilldata } from "../../Database/Skilldata";
 const Skills = () => {
   const data = Skilldata;
 
-  console.log(data);
   return (
     <>
       <div className="text-white">
@@ -14,7 +13,7 @@ const Skills = () => {
           {data.map((item) => {
             return (
               <Link
-                to="/skills/growth"
+                to={`/skills/${item.Subject}`}
                 key={item.id}
                 className="d-grid skills-link col-12 col-md-5 col-lg-3 p-2 btn-bg-active"
               >

@@ -35,7 +35,7 @@ function App() {
             <Route path="/skills" element={<Skills />} />
           </Routes>
           <Routes>
-            <Route path="/skills/growth" element={<Growth />} />
+            <Route path="/skills/:id" element={<Growth />} />
           </Routes>
         </div>
       </div>
