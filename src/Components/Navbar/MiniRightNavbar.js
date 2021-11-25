@@ -44,6 +44,7 @@ const MiniRightNavbar = () => {
           </button>
           <Link to="/">
             <img
+              onClick={() => handleCurrentSection(1)}
               className="img-style-mini"
               src="https://tiny.school/tinyschool-logo-with-text.svg"
               alt="icon"
