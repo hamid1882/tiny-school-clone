@@ -28,6 +28,10 @@
   background-color: $bg-dark;
 }
 
+.mini-position {
+  top: 0;
+}
+
 .navbar-scroll {
   overflow-y: scroll;
   overflow-x: hidden;
@@ -45,6 +49,10 @@
 
 .navbar-border {
   border-right: 1px solid #e5e7eb6b;
+}
+
+.collapse {
+  position: absolute;
 }
 
 .img-style {

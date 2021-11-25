@@ -24,15 +24,17 @@ const MiniRightNavbar = () => {
   return (
     <div className="navbar-mini d-md-none sticky-top">
       <button
-        className={`btn shadow-none text-white my-3 ${
-          selectNav === false ? "d-block" : "d-none"
+        className={`btn shadow-none text-white my-3  ${
+          selectNav === false
+            ? "navbar-transition "
+            : "navbar-transition-collapse"
         }`}
         onClick={handleToggleNav}
       >
         <i className="fa fa-bars icon-hover"></i>
       </button>
       <div
-        className={` navbar-scroll navbar-border position-absolute navbar-bg px-3 h-100 ${
+        className={` navbar-scroll navbar-border position-absolute mini-position navbar-bg px-3 h-100 ${
           selectNav ? "navbar-transition" : "navbar-transition-collapse"
         }`}
       >
@@ -116,19 +118,19 @@ const MiniRightNavbar = () => {
           {/* 5 */}
 
           <Link
-          to="/skills"
-          onClick={() => handleCurrentSection(5)}
-          className={`btn-link-style btn-style d-flex gap-2 w-100 p-2 align-items-center ${
-            selectCurrent === 5 ? "btn-bg-active" : null
-          }`}
-        >
-          <i
-            className={`fa fa-mask ${
-              selectCurrent === 5 ? "btn-bg-active-icon" : "bg-transparent"
+            to="/skills"
+            onClick={() => handleCurrentSection(5)}
+            className={`btn-link-style btn-style d-flex gap-2 w-100 p-2 align-items-center ${
+              selectCurrent === 5 ? "btn-bg-active" : null
             }`}
-          ></i>
-          <div className="fs-6 bg-transparent">All Skills</div>
-        </Link>
+          >
+            <i
+              className={`fa fa-mask ${
+                selectCurrent === 5 ? "btn-bg-active-icon" : "bg-transparent"
+              }`}
+            ></i>
+            <div className="fs-6 bg-transparent">All Skills</div>
+          </Link>
         </div>
       </div>
     </div>
