@@ -1,9 +1,18 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
-import { Skilldata } from "../../Database/Skilldata";
 
 const Skills = () => {
-  const data = Skilldata;
+  const [data, setdata] = useState([])
+
+  useEffect(() => {
+    fetch("/api/skilldata")
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+      })
+      .then((jsonResponse) => setdata(jsonResponse.Skilldata));
+  }, []);
 
   return (
     <>

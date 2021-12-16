@@ -11,6 +11,7 @@ import RightNavbar from "./Components/Navbar/RightNavbar";
 import "./Styles/Styles.scss";
 
 function App() {
+
   return (
     <Router>
       <div className="d-flex background">
