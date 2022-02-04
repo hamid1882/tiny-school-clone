@@ -1,21 +1,12 @@
-import React, {useState, useEffect} from "react";
 import { useParams } from "react-router";
+import { Learn } from "../../Database/Learn";
 
 const Growth = () => {
   const params = useParams();
-  const [Learn, setLearn] = useState([])
+  const subjectDetails = Learn.filter((data) => data);
   
-  useEffect(() => {
-    fetch("/api/learn/")
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
-        }
-      })
-      .then((jsonResponse) => setLearn(jsonResponse.Learn));
-  }, []);
 
-  const filteredData = Learn.filter(item => item.subject === params.id);
+  const filteredData = subjectDetails.filter(item => item.subject === params.id);
   
   return (
     <>
